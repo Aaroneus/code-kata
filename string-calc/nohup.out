@@ -1,0 +1,3 @@
+[ 428674]   WARN - ution.rmi.RemoteProcessSupport - log4j:WARN No appenders could be found for logger (org.apache.maven.wagon.providers.http.httpclient.client.protocol.RequestAddCookies). 
+[ 428674]   WARN - ution.rmi.RemoteProcessSupport - log4j:WARN Please initialize the log4j system properly. 
+[ 428674]   WARN - ution.rmi.RemoteProcessSupport - log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info. 
