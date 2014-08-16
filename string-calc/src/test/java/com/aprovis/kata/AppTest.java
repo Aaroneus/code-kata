@@ -96,15 +96,30 @@ public class AppTest
     public void shouldThrowExceptionContainingTheOffendingNegativeValues() {
         String values = "-1,2,3,-4";
 
-        Integer calculatedValue = null;
         try {
-            calculatedValue = calculator.add(values);
+            calculator.add(values);
+            Assert.fail();
         } catch (RuntimeException e) {
-            System.out.println(e.getMessage());
             assertThat(e.getMessage(), startsWith("Negatives not allowed - [-1, -4]"));
         }
-
     }
 
+    @Test
+    public void numbersGreaterThanOneThousandShouldNotBeIncludedInTheCalculation() {
+        String values = "1,2,3,1002";
 
+        Integer calculatedValue = calculator.add(values);
+        assertThat(calculatedValue, is(6));
+
+    }
 }
+
+
+
+
+
+
+
+
+
+

@@ -39,7 +39,10 @@ public class Calculator {
         Integer sumTotal = 0;
 
         for(String value : valuesToSum){
-            sumTotal += Integer.valueOf(value);
+            Integer valueToSum = Integer.valueOf(value);
+            if(valueToSum <= 1000){
+                sumTotal += valueToSum;
+            }
         }
         return sumTotal;
     }
